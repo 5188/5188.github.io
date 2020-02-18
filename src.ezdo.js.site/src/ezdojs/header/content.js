@@ -37,7 +37,7 @@ class Content extends ez.Node {
         return {
             nav: [
                 { name: '首页', link: 'home' },
-                { name: '模板', link: 'temp' },
+                { name: '工具', link: 'tool' },
                 { name: '文档', link: 'docs' },
                 { name: '帮助', link: 'help' }
             ]

@@ -32,6 +32,10 @@
     line-height: 2rem;
 }
 
+.ez-tool-p {
+    margin: 20px;
+}
+
 .ez-help p {
     margin-bottom: 10px;
 }

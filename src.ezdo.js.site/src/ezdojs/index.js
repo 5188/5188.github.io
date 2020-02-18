@@ -5,7 +5,7 @@ import Header from './header/'
 import Home from './pages/home'
 import Docs from './pages/docs'
 import Help from './pages/help'
-import Temp from './pages/temp'
+import Tool from './pages/tool'
 
 
 class EzdoSite extends ez.Node {
@@ -28,7 +28,7 @@ class EzdoSite extends ez.Node {
         router.container = this.content
         router.routers = [
             {name:'home', node: new Home()},
-            {name:'temp', node: new Temp()},
+            {name:'tool', node: new Tool()},
             {name:'docs', node: new Docs()},
             {name:'help', node: new Help()}
         ]
@@ -39,3 +39,4 @@ class EzdoSite extends ez.Node {
 }
 
 export default EzdoSite
+

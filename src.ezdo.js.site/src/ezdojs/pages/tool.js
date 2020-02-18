@@ -7,14 +7,8 @@ class Header extends ez.Node {
         this.addClass('ez-temp-header')
         
 
-        // this.title = new ez.Node('h3')
-        // this.title.text = 'ezdo'
-        // this.add(this.title)
-        // this.title.addClass('home-header-title')
-
         let arr = [
-            '为了让朋友们更快的了解ezdo，这里也为大家提供了一个简单的小项目。',
-            '这个项目就是当前的官方网站的项目源码，有喜欢的朋友可以在下面找到线索'
+            '为了让朋友们更快的了解ezdo，这里也为大家提供了一个小工具'
         ]
         arr.forEach(item => {
             let subTitle = new ez.Node('p')
@@ -25,7 +19,7 @@ class Header extends ez.Node {
     }
 }
 
-class Temp extends ez.Node {
+class Tool extends ez.Node {
     constructor() {
         super()
 
@@ -34,14 +28,12 @@ class Temp extends ez.Node {
         this.header = new Header()
         this.add(this.header)
 
-
         let coder = new ez.Node()
         this.add(coder)
 
         let arr = [
-            'git clone https://github.com/ezdojs/ezdo-start',
-            'cd ezdo-start',
-            'npm install',
+            'npx create-ezdo-app demo',
+            'cd demo && npm install',
             'npm start'
         ]
 
@@ -55,7 +47,12 @@ class Temp extends ez.Node {
             code.addClass('language-shell')
             coder.add(new ez.Node())
         })
+
+        let p = new ez.Node('p')
+        p.text = '到此，你就应该看见项目已经启动并打开了一个页面。你可以尝试修改一些代码来熟悉一下'
+        p.addClass('ez-tool-p')
+        this.add(p)
     }
 }
 
-export default Temp
+export default Tool

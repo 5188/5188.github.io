@@ -20,7 +20,7 @@ class Docs extends ez.Node {
                 {name:'手动安装', md: '/docs/003.md', children: null},
             ]},
             {name:'虚拟节点', md: '/docs/004.md', children: null},
-            {name:'事件', md: '/docs/004.md', children: null},
+            {name:'事件', md: '/docs/005.md', children: null},
             {name:'列表', md: '/docs/004.md', children: null},
             {name:'批处理', md: '/docs/004.md', children: null},
             {name:'扩展性', md: '/docs/004.md', children: null},
