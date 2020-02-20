@@ -43,7 +43,7 @@ class Docs extends ez.Node {
                 this.markedContent.html = marked(res.data)
                 setTimeout(() => {
                     Prism.highlightAll(document)
-                }, 60);
+                }, 30);
             })
         }
     }

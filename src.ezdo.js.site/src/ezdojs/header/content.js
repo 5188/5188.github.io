@@ -1,5 +1,7 @@
 import ez from 'ezdo'
 
+import navd from './../../data/mainnav'
+
 class Content extends ez.Node {
     constructor(router) {
         super()
@@ -16,10 +18,10 @@ class Content extends ez.Node {
         this.nav.addClass('main-menu')
         this.add(this.nav)
 
-        this.data.nav.forEach(data => {
+        navd.forEach(data => {
             let item = new ez.Node('li')
             item.addClass('main-menu-item')
-            item.text = data.name
+            item.text = data.title
             item.data = data
             this.nav.add(item)
             item.on('click', this.onSelectMenuItem, this)
@@ -27,22 +29,12 @@ class Content extends ez.Node {
     }
 
     onSelectMenuItem(node) {
-        this.router.to(node.data.link)
+        this.router.to(node.data.name)
         setTimeout(() => {
             Prism.highlightAll(document)
-        }, 60);
+        }, 30);
     }
 
-    get data() {
-        return {
-            nav: [
-                { name: '首页', link: 'home' },
-                { name: '工具', link: 'tool' },
-                { name: '文档', link: 'docs' },
-                { name: '帮助', link: 'help' }
-            ]
-        }
-    }
 }
 
 export default Content

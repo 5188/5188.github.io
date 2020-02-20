@@ -1,18 +1,17 @@
 import ez from 'ezdo'
 import './style.css'
 
+import Router from 'ezdo-router'
+
 import Header from './header/'
-import Home from './pages/home'
-import Docs from './pages/docs'
-import Help from './pages/help'
-import Tool from './pages/tool'
+import navd from './../data/mainnav'
 
 
 class EzdoSite extends ez.Node {
     constructor() {
         super()
 
-        let router = new ez.Router()
+        let router = new Router()
         
         // main nav
         this.nav = new Header(router)
@@ -26,12 +25,7 @@ class EzdoSite extends ez.Node {
         // 可以做成当前node下的需要node都可接收此属性
         
         router.container = this.content
-        router.routers = [
-            {name:'home', node: new Home()},
-            {name:'tool', node: new Tool()},
-            {name:'docs', node: new Docs()},
-            {name:'help', node: new Help()}
-        ]
+        router.routers = navd
 
         // 
         router.to('home')

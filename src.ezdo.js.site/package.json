@@ -11,8 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-    "ezdo": "^2.1.0",
-    "ezdo-tree": "^1.0.3",
+    "ezdo": "^2.1.3",
+    "ezdo-router": "^1.0.0",
+    "ezdo-tree": "^1.0.9",
     "marked": "^0.8.0"
   },
   "devDependencies": {
